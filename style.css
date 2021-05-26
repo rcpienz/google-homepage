@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+  --bgColor: rgb(44, 44, 44);
+  --fontColor: rgb(243, 243, 243);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--bgColor);
+  color: var(--fontColor);
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+a {
+  color: var(--fontColor);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav h3 {
+  font-size: 1.3rem;
+}
+
+.circ-hover {
+  padding: 0.5rem;
+}
+
+.circ-hover:hover {
+  cursor: pointer;
+  outline: none;
+  background-color: rgb(78, 78, 78);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.nav img {
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+
+/* main */
+
+.main {
+  width: 100%;
+  margin: auto;
+}
+
+.search-bar {
+  height: 45px;
+  border-radius: 25px;
+  border: 1px solid rgba(243, 243, 243, 0.349);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin: 3rem 0;
+}
+
+.search-bar:hover {
+  box-shadow: 0px 0px 5px 5px rgba(211, 211, 211, 0.342);
+}
+
+.textbox {
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  color: var(--fontColor);
+  font-size: 1.8rem;
+}
+
+.btn-container {
+  margin-bottom: 3rem;
+}
+
+.btn {
+  background-color: rgb(50, 50, 50);
+  padding: 1rem;
+  color: var(--fontcolor);
+  border: none;
+  margin: 0 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 2px 1px rgba(245, 245, 245, 0.322);
+}
+
+.info-container p {
+  font-size: 1.3rem;
+}
+
+.info-container a {
+  color: #8981dd;
+}
