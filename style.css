@@ -3,6 +3,7 @@
 :root {
   --bgColor: rgb(44, 44, 44);
   --fontColor: rgb(243, 243, 243);
+  --transition: all 0.2s linear;
 }
 
 *,
@@ -22,7 +23,7 @@ body {
   color: var(--fontColor);
   font-family: "Open Sans", sans-serif;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,6 +34,7 @@ body {
   text-align: center;
   margin: auto;
   padding: 0 2rem;
+  margin-top: -12rem;
 }
 
 a {
@@ -42,6 +44,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  transition: var(--transition);
 }
 
 .header {
@@ -64,15 +67,15 @@ a:hover {
 }
 
 .circ-hover {
+  cursor: pointer;
+  outline: none;
   padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .circ-hover:hover {
-  cursor: pointer;
-  outline: none;
   background-color: rgb(78, 78, 78);
-  border-radius: 50%;
-  padding: 0.5rem;
+  transition: var(--transition);
 }
 
 .nav img {
@@ -88,6 +91,10 @@ a:hover {
   margin: auto;
 }
 
+.mic {
+  cursor: pointer;
+}
+
 .search-bar {
   height: 45px;
   border-radius: 25px;
@@ -100,7 +107,8 @@ a:hover {
 }
 
 .search-bar:hover {
-  box-shadow: 0px 0px 5px 5px rgba(211, 211, 211, 0.342);
+  box-shadow: 0px 0px 3px 3px rgba(211, 211, 211, 0.342);
+  transition: var(--transition);
 }
 
 .textbox {
@@ -131,6 +139,7 @@ a:hover {
 
 .btn:hover {
   box-shadow: 0px 0px 2px 1px rgba(245, 245, 245, 0.322);
+  transition: var(--transition);
 }
 
 .info-container p {
@@ -139,4 +148,49 @@ a:hover {
 
 .info-container a {
   color: #8981dd;
+}
+
+.footer {
+  background-color: rgb(50, 50, 50);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.country-cont {
+  padding: 1.2rem 3rem;
+  border-bottom: 1px solid rgba(88, 88, 88, 0.322);
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(179, 179, 179);
+}
+
+.footer-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  row-gap: 2rem;
+}
+
+.footer-links,
+.footer-links-2 {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 10px;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-div {
+    flex-direction: row;
+  }
 }
